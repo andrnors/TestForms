@@ -52,10 +52,6 @@ namespace TestFormsShared
             }
         }
 
-	    protected virtual void OnResume()
-	    {
-	        GetGameScores(GameName);
-	    } 
         public SelectedGamePage (string gameName)
 		{
 			InitializeComponent ();
@@ -71,7 +67,7 @@ namespace TestFormsShared
             AmostiService amostiService = new AmostiService();
             GameHighScores.Clear();
             var scores = await amostiService.GetGameScores(gamename);
-	        RecordId = scores.First().recordId; // Finner id til verdien med høyest score
+	        RecordId = scores.First().recordId; // Finner id til verdien med høyest score, usannsynlig unødvendig siden id ble satt av apiet
             foreach (var score in scores)
             {
                 var username = score.playerName;

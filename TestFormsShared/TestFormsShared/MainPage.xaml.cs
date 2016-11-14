@@ -3,13 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TestFormsShared.Models;
+using TestFormsShared.Service;
 using Xamarin.Forms;
 
 namespace TestFormsShared
 {
 	public partial class MainPage : ContentPage
 	{
-		public MainPage()
+	    public MainPage()
 		{
 			InitializeComponent();
 		}
@@ -18,8 +20,8 @@ namespace TestFormsShared
 	    {
 	        string username = Username.Text;
 	        string password = Password.Text;
-
-	        if (username == null && password == null)
+            
+	        if (username == null || password == null)
 	        {
 	            await DisplayAlert("Whoops", "Username or password seems to be wrong", "Try Again");
 
@@ -30,5 +32,7 @@ namespace TestFormsShared
                 Navigation.RemovePage(this);
             }
         }
+
+
 	}
 }

@@ -4,8 +4,7 @@
              x:Class="TestFormsShared.AddNewScorePage"
              Title="Add New Score"
              >
-  
-  
+
     <StackLayout Orientation="Vertical" Spacing="25" Padding="50">
       <Entry x:Name="Score" Placeholder="Score" Keyboard="Numeric" HorizontalTextAlignment="Center"/>
       <Button x:Name="SubmitBtn" Text="Submit" Margin="0, 15, 0, 0" Clicked="SubmitBtn_OnClicked"/>

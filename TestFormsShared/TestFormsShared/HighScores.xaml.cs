@@ -62,11 +62,6 @@ namespace TestFormsShared
             }
         }
 
-        protected virtual void OnResume()
-        {
-           GetAllGames();
-        }
-
         private async void GamesListView_OnItemSelected(object sender, SelectedItemChangedEventArgs e)
 	    {
 	        var selection = e.SelectedItem as Game;
